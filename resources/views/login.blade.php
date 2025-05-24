@@ -3,7 +3,7 @@
             <div class="container">
                 <div class="row justify-content-center mt-5">
                     <div class="col-4 col-md-4 card-login">
-                        <form action="{{'register'}}" method="POST" enctype="multipart/form-data">
+                        <form action="{{'login'}}" method="POST" enctype="multipart/form-data">
                             @csrf
                           <h5 class="text-center fs-3 mb-3">Login</h5>
                             <div class="form-group">
