@@ -35,17 +35,17 @@ class PublicController extends Controller
     $request->validate([
         'title' => 'required|string|max:255',
         'content' => 'required|string',
-        'image' => 'nullable|image|max:2048', // max 2MB
+        'image' => 'nullable|image|max:2048',
     ]);
 
     $post = new Post();
     $post->title = $request->title;
     $post->content = $request->content;
 
-    // Salvataggio immagine (se presente)
+ 
     if ($request->hasFile('image')) {
         $path = $request->file('image')->store('uploads', 'public');
-        $post->image = $path; // salva solo il percorso relativo
+        $post->image = $path; 
     }
 
     $post->save();
@@ -55,9 +55,9 @@ class PublicController extends Controller
     
     
     public function details(Post $post){
-    
-            $post->load(['messages' => function ($query) {
-        $query->latest(); // equivale a ->orderBy('created_at', 'desc')
+            
+        $post->load(['messages' => function ($query) {
+        $query->latest(); 
     }]);
         return view('details', compact('post'));
     }

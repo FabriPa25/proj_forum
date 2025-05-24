@@ -14,7 +14,7 @@
                     Se sei registrato, sei già dei nostri: qui puoi creare nuove discussioni, condividere idee, dubbi o curiosità con tutta la community.
                     Hai voglia di fare due chiacchiere in tempo reale? La sezione Chat ti aspetta per scambiare messaggi al volo con gli altri membri! <br>
 
-                    <h3 class="mt-3">🧠 Condividi. 💬 Parla. 🤝 Connettiti. </h3><br>
+                    <h3 class="mt-3"> Condividi  Parla  Connettiti. </h3><br>
 
                     Che tu voglia imparare qualcosa, confrontarti o semplicemente passare un po’ di tempo in buona compagnia: sei nel posto giusto.
 

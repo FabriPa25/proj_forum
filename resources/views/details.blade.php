@@ -41,7 +41,12 @@
                     @foreach ($post->messages as $message)
                         <div class="card card-forum mb-3 border-start border-white border-3 shadow-sm">
                             <div class="card-header bg-light d-flex justify-content-between align-items-center">
-                                <span class="fw-bold">Anonimo</span>
+                                
+                                @if ($message->user)
+                                    <span class="fw-bold">{{ $message->user->name }}</span>
+                                @else
+                                    <span class="fw-bold">Utente sconosciuto</span>
+                                @endif
 
                                 
                                 <small class="text-muted">{{ $message->updated_at->format('d/m/Y H:i') }}</small>
