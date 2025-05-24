@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Chat;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
@@ -17,7 +18,8 @@ class PublicController extends Controller
     }
 
     public function chat( ){
-        return view ('chat');   
+        $chats = Chat::all();
+        return view ('chat', compact('chats'));   
     }
 
 

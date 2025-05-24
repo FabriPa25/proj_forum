@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ChatController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\MessageController;
 
@@ -20,6 +21,9 @@ Route::get('/details/{post}', [PublicController::class, 'details'])->name('detai
 
 Route::post('/message/{id}', [MessageController::class, 'messagepost'])->name('message.post');
 
+// Chat
+
+Route::post('/chat', [ChatController::class, 'chatpost'])->name('chat.post');
 
 
 

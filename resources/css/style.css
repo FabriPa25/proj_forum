@@ -123,3 +123,18 @@ body {
     background: linear-gradient(135deg, #c8f7dc, #eaffd9);
     transform: translateY(-2px);
   }
+
+
+
+  .chat-bubble {
+    padding: 10px 15px;
+    border-radius: 20px 20px 50px 50px;
+    /* background: linear-gradient(135deg, #a8e6cf, #dcedc1);
+    color: #1e3a34; */
+    text-decoration: none;
+    max-width: 60%;
+    position: relative;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    font-size: 14px;
+    word-wrap: break-word;
+}

@@ -13,25 +13,24 @@
                 <div class="card shadow-sm">
                     <div class="card-header text-center">
                         <strong></strong>
-                        <p class="mb-0 text-muted" style="font-size: 0.9rem;">Pubblicato il: </p>
+                        <p class="mb-0 text-muted" style="font-size: 0.9rem;">Condividi i tuoi pensieri e divertiti.</p>
                     </div>
 
-                    <div class="card-body" style="height: 400px; overflow-y: auto; background-color: #f9f9f9;">
-
-                                <div class="d-flex mb-3">
-                                    <div class="p-3 rounded shadow-sm" style="background-color:">
-                                        <small class="text-muted d-block mb-1"></small>
-                                        <p class="mb-0"></p>
+                        <div id="chat-messages" class="card-body" style="height: 400px; overflow-y: auto; background-color: #f9f9f9;">
+                            @foreach ($chats as $chat)
+                                <div class="d-flex mb-3 {{ $chat->user_id == auth()->id() ? 'justify-content-end'  : 'justify-content-start' }}">
+                                    <div class="p-3 chat-bubble w-50 ms-3 me-3" 
+                                        style="max-width: 70%;  background-color: {{ $chat->user_id == auth()->id() ? '#9edbd7' : '#9ec5db'}};">
+                                        <strong class="ms-3">{{ $chat->user->name }}</strong>
+                                        <p class="mb-0 text-center">{{ $chat->message }}</p>
                                     </div>
                                 </div>
-
-                            <p class="text-center text-muted">Nessun commento disponibile.</p>
-
-                    </div>
+                            @endforeach
+                        </div>
 
                     <!-- Form invio nuovo messaggio -->
                     <div class="card-footer">
-                        <form action="" method="POST">
+                        <form action="{{route('chat.post')}}" method="POST">
                             @csrf
                             <div class="input-group">
                                 <textarea name="message" class="form-control" placeholder="Scrivi un messaggio..." required></textarea>
@@ -53,5 +52,11 @@
         <a href="/" class="home-button">Torna alla Home</a>
     </div>
 
+      <!-- mantiene lo scroll della chat sull'ultimo messaggio -->
+
+<script>
+    const chatMessages = document.getElementById('chat-messages');
+    chatMessages.scrollTop = chatMessages.scrollHeight;  
+</script>
 
 </x-layout>
