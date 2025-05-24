@@ -1,0 +1,125 @@
+body {
+    /* background-image: url('/public/media/verde.png'); */
+    background: linear-gradient(135deg, #a8e6cf, #dcedc1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position:unset;
+}
+
+.logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 10%;
+    border: 5px solid #ccc;
+    margin-right: 70px;
+    margin-left: 20px;
+}
+
+.navbar {
+    /* background-image: url('/public/media/navbar.png'); */
+    background-color: rgba(128, 128, 128, 0.233);
+    margin-left: 50px;
+    margin-right: 50px;
+     border-radius: 30px;
+    margin-top: 40px;
+    border: 2px solid #ccc;
+}
+
+.card-login {
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 5px 5px 14px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #a8e6cf, #dcedc1);
+    margin-top: 120px;
+}
+
+.card-register {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 5px 5px 14px rgba(0, 0, 0, 0.1);
+    background-color: #3ac2e895;
+    margin-top: 120px;
+}
+
+.card-forum {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 5px 5px 14px rgba(0, 0, 0, 0.1);
+    background-color: #f2f2f2c1;
+    margin-top: 120px;
+}
+
+.save-img {
+   text-align: center;
+   margin: 0 auto;
+   width: 100px;
+   height: 100px;    
+}
+
+
+
+
+/* Font */
+
+.playball {
+  font-family: "Playball", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wght" 400;
+}
+
+
+.honk {
+  font-family: "Honk", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "MORF" 15,
+    "SHLN" 50;
+}
+
+
+* {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+/* Torna alla home (chat) */
+
+  .home-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #a8e6cf, #dcedc1);
+    color: #1e3a34;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+
+  .home-button:hover {
+    background: linear-gradient(135deg, #c8f7dc, #eaffd9);
+    transform: translateY(-2px);
+  }

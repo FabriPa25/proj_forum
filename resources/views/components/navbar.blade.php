@@ -1,36 +1,53 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg nav">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <img class="logo" src="{{asset('media/logo.png')}}" alt="">
+    
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
       <ul class="navbar-nav">
-        <li class="nav-item">
+        <li class="nav-item me-5">
           <a class="nav-link active" aria-current="page" href="{{'/'}}">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{'forum'}}">Forum</a>
+        
+        <li class="nav-item me-5">
+          <a class="nav-link" href="{{route('forum')}}">Forum</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{'chat'}}">Chat</a>
+       
+        <li class="nav-item me-5">
+          <a class="nav-link" href="{{route('chat')}}">Chat</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{'login'}}">Login</a>
+       
+        @guest
+        <li class="nav-item me-5">
+          <a class="nav-link" href="{{route('login')}}">Login</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Register</a>
-        </li>        
-        <li class="nav-item dropdown">
+        <li class="nav-item me-5">
+          <a class="nav-link" href="{{route('register')}}">Register</a>
+        </li>    
+        @endguest  
+        
+        @auth    
+        <li class="nav-item dropdown ">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown link
+           Benvento: {{Auth::user()->name}}
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="{{route('profilo')}}">Profilo</a></li>
+            <li><a class="dropdown-item" href="#">Pannello di controllo</a></li>
+                    <!-- pulsante logout -->
+              <li>
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-inline">
+                @csrf
+                <button type="submit" class="dropdown-item">Logout</button>
+              </form>
+                      <!-- fine pulsante logout -->
+            </li>
           </ul>
         </li>
+        @endauth
+       
       </ul>
     </div>
   </div>
