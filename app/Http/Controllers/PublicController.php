@@ -23,6 +23,11 @@ class PublicController extends Controller
     }
 
 
+    public function control_panel(){
+          $posts =  post::all();
+        return view ('control_panel', compact('posts'));
+    }
+
                 // vista pagina profilo
 
     public function profilo(){

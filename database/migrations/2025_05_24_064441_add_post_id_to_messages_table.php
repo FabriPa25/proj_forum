@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::table('messages', function (Blueprint $table) {
             $table->foreignId('post_id')->constrained()->onDelete('cascade');
+              $table->foreignId('user_id')->constrained()->onDelete('cascade');
         });
     }
 

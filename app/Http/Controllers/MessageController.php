@@ -22,7 +22,7 @@ public function messagepost(Request $request, $id)
 
 
 
-    return back()->with('success', 'Messaggio inviato con successo');
+    return back()->with('success', 'Commento Publicato');
 }
 
 

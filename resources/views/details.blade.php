@@ -19,24 +19,32 @@
            </div>
 
 
-@if(session('success'))
-    <div class="alert alert-success text-center w-25 mx-auto">
-        {{ session('success') }}
-    </div>
-@endif
-@error('message')
-    <div class="alert alert-danger text-center">{{ $message }}</div>
-@enderror
-
 
     <div class="container py-4">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8">
 
+                @if(session('success'))
+                    <div class="alert alert-success text-center w-75 mx-auto">
+                        {{ session('success') }}
+                    </div>
+                @endif
+                @error('message')
+                    <div class="alert alert-danger text-center">{{ $message }}</div>
+                @enderror
+
 
                 <!-- Commenti -->
-                <h4 class="mb-3">Commenti</h4>
+                <h4 class="">Commenti : </h4>
+            @guest
+                <p class="text-center"> * Registrati per lasciare un commento:</p>
+                <div class="d-flex justify-content-center">
+                <a href="{{ route('register') }}" class="btn btn-success me-3">Registrati</a>
+                <a href="{{ route('login') }}" class="btn btn-success me-3">Accedi</a>
+                </div>
+            @endguest
 
+@auth
                 @if ($post->messages->count())
                     @foreach ($post->messages as $message)
                         <div class="card card-forum mb-3 border-start border-white border-3 shadow-sm">
@@ -88,7 +96,7 @@
 
 
 
-
+@endauth
 
 
 

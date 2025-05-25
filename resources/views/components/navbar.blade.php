@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg nav">
   <div class="container-fluid">
-    <img class="logo" src="{{asset('media/logo.png')}}" alt="">
+    <img class="logo2" src="{{asset('media/logo2.png')}}" alt="">
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -34,8 +34,8 @@
            Benvento: {{Auth::user()->name}}
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="{{route('profilo')}}">Profilo</a></li>
-            <li><a class="dropdown-item" href="#">Pannello di controllo</a></li>
+            <li><a class="dropdown-item" href="{{route('profilo')}}">Crea una nuova discussione</a></li>
+            <li><a class="dropdown-item" href="{{route('control_panel')}}">Pannello di controllo</a></li>
                     <!-- pulsante logout -->
               <li>
               <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-inline">

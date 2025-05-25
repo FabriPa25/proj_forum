@@ -1,7 +1,8 @@
 <x-layout>
     <x-navbar></x-navbar>
+  
         <h1 class="text-center mt-5">Forum Attivi</h1>
-
+   
         
 @if (session('success'))
     <div class="alert alert-success text-center fs-4 mt-5 w-25 mx-auto">

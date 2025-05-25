@@ -13,7 +13,7 @@
                 <div class="card shadow-sm">
                     <div class="card-header text-center">
                         <strong></strong>
-                        <p class="mb-0 text-muted" style="font-size: 0.9rem;">Condividi i tuoi pensieri e divertiti.</p>
+                        <p class="mb-0 text-muted" style="font-size: 0.9rem;">Ciao {{Auth::user()->name}}, Condividi i tuoi pensieri e divertiti.</p>
                     </div>
 
                         <div id="chat-messages" class="card-body" style="height: 400px; overflow-y: auto; background-color: #f9f9f9;">

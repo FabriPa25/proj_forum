@@ -2,19 +2,38 @@
     <x-navbar></x-navbar>
 
 
+    <!-- ELIMINAZIONE ACCOUNT -->
+@if(session('success'))
+    <div class="alert alert-success text-center mt-5 w-25 mx-auto">
+        {{ session('success') }}
+    </div>
+@endif
+
+
+
+                <!-- IMMAGINE RANA
+                 
+    <div class="d-flex justify-content-center mt-3">
+        <img class="logo3 " src="{{asset('media/rana.png')}}" alt="">
+    </div> -->
+
+
+
                 <!-- benvenuto -->
 
  <div class="container">
     <div class="row justify-content-center mt-5">
-        <div class="col-12 col-md-12 p-2 text-center fs-3 card-login">
-
-                   <p class="text-center">Benvenuto nel Forum! <br>
+        <div class="col-12 col-md-12 p-2  fs-3 card-login">
+                    
+                          <img class="logo" src="{{asset('media/logo.png')}}" alt="">
+                    
+                   <p class="text-center">{{Auth::user()->name}} Benvenuto nel Forum! <br>
                     La tua nuova zona di confronto, chiacchiere e scoperte.
 
                     Se sei registrato, sei già dei nostri: qui puoi creare nuove discussioni, condividere idee, dubbi o curiosità con tutta la community.
                     Hai voglia di fare due chiacchiere in tempo reale? La sezione Chat ti aspetta per scambiare messaggi al volo con gli altri membri! <br>
 
-                    <h3 class="mt-3"> Condividi, Parla, Connettiti ! </h3><br>
+                    <h3 class="mt-3 text-center"> Condividi, Parla, Connettiti ! </h3><br>
 
                     Che tu voglia imparare qualcosa, confrontarti o semplicemente passare un po’ di tempo in buona compagnia: sei nel posto giusto.
 

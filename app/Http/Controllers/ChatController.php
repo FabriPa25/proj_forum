@@ -20,7 +20,7 @@ class ChatController extends Controller
         $chat->message = $request->message;
         $chat->save();
 
-        return redirect()->route('chat')->with('success', 'Messaggio inviato con successo');
+        return redirect()->route('chat')->with('success', 'Messaggio inviato ');
     }
     
  
